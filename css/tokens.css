@@ -1,1 +1,60 @@
-
+/* Design tokens shared by every page. Light values on :root, dark values for system and explicit dark theme. */
+/* Layout: one centered column. Header with date and progress, a compact add bar, filter tabs + search, then a single ruled list. */
+:root {
+  --bg: #f3f1f8;
+  --surface: #ffffff;
+  --surface-2: #f8f6fc;
+  --line: #e0dcec;
+  --fg: #1d1a2b;
+  --muted: #655f7a;
+  --accent: #6a45d6;
+  --accent-ink: #ffffff;
+  --accent-soft: #ece6fb;
+  --danger: #b4332b;
+  --danger-soft: #fbe8e6;
+  --c-work: #2858cf;       --c-work-bg: #e3eafb;
+  --c-personal: #a35a0c;   --c-personal-bg: #fbecd8;
+  --c-study: #1b7a48;      --c-study-bg: #dbf1e3;
+  --c-other: #546471;      --c-other-bg: #e6eaee;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "DM Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #13111c;
+    --surface: #1c1928;
+    --surface-2: #232034;
+    --line: #302c45;
+    --fg: #ebe8f5;
+    --muted: #a29cbb;
+    --accent: #a58bff;
+    --accent-ink: #1a0f3d;
+    --accent-soft: #2b2350;
+    --danger: #f18d85;
+    --danger-soft: #3b201f;
+    --c-work: #93b3ff;     --c-work-bg: #1c2a4d;
+    --c-personal: #f2b566; --c-personal-bg: #3d2d15;
+    --c-study: #72d79d;    --c-study-bg: #163a28;
+    --c-other: #a9b8c3;    --c-other-bg: #26333c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #13111c;
+  --surface: #1c1928;
+  --surface-2: #232034;
+  --line: #302c45;
+  --fg: #ebe8f5;
+  --muted: #a29cbb;
+  --accent: #a58bff;
+  --accent-ink: #1a0f3d;
+  --accent-soft: #2b2350;
+  --danger: #f18d85;
+  --danger-soft: #3b201f;
+  --c-work: #93b3ff;     --c-work-bg: #1c2a4d;
+  --c-personal: #f2b566; --c-personal-bg: #3d2d15;
+  --c-study: #72d79d;    --c-study-bg: #163a28;
+  --c-other: #a9b8c3;    --c-other-bg: #26333c;
+  color-scheme: dark;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daybook App</title>
+  <meta name="description" content="A simple task manager with categories, due dates, filters and drag-to-reorder.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main class="app">
+  <header class="head">
+    <div>
+      <a class="home" href="index.html">&larr; Home</a>
+      <h1>Daybook</h1>
+      <p class="today" id="today"></p>
+    </div>
+    <div class="progress">
+      <div class="progress-label"><span id="progText">0 of 0 done</span><span id="progPct">0%</span></div>
+      <div class="bar" role="progressbar" aria-label="Tasks completed" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progBar"><i id="progFill"></i></div>
+    </div>
+  </header>
+
+  <form class="add" id="addForm" novalidate>
+    <input class="field title-in" id="newTitle" type="text" placeholder="What needs doing?" aria-label="Task name" maxlength="140" autocomplete="off">
+    <select class="field" id="newCat" aria-label="Category">
+      <option>Work</option><option>Personal</option><option>Study</option><option>Other</option>
+    </select>
+    <input class="field" id="newDue" type="date" aria-label="Due date">
+    <button class="btn primary" type="submit">Add task</button>
+    <p class="hint" id="addHint" role="alert"></p>
+  </form>
+
+  <section aria-label="Filters" style="display:flex;flex-direction:column;gap:12px">
+    <div class="bar-row">
+      <div class="tabs" role="group" aria-label="Filter by status">
+        <button class="tab" type="button" data-filter="all" aria-pressed="true">All <span class="n" id="nAll">0</span></button>
+        <button class="tab" type="button" data-filter="active" aria-pressed="false">Active <span class="n" id="nActive">0</span></button>
+        <button class="tab" type="button" data-filter="done" aria-pressed="false">Completed <span class="n" id="nDone">0</span></button>
+      </div>
+      <div class="search"><input class="field" id="search" type="search" placeholder="Search tasks" aria-label="Search tasks"></div>
+    </div>
+    <div class="cats" id="cats" role="group" aria-label="Filter by category"></div>
+  </section>
+
+  <section class="panel" aria-label="Tasks">
+    <ul id="list"></ul>
+    <div class="empty" id="empty" hidden></div>
+    <div class="foot">
+      <span class="count" id="left">0 left</span>
+      <span>Drag the handle or use arrow keys to reorder</span>
+      <button class="btn" type="button" id="clearDone">Clear completed</button>
+    </div>
+  </section>
+  <p class="note">Tasks are saved in this browser, so they stay after a reload.</p>
+</main>
+<div id="toastHost"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

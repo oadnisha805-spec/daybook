@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daybook</title>
+  <meta name="description" content="Daybook is a task manager that runs in your browser: categories, due dates, filters, search, drag-to-reorder and automatic saving.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+  <header class="wrap nav">
+    <a class="brand" href="index.html">Daybook</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#built">Built with</a>
+      <a class="btn" href="app.html">Open app</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow">Task manager &middot; runs in your browser</p>
+        <h1>Plan the day. Tick it off.</h1>
+        <p class="lead">Daybook keeps your work, personal and study tasks in one list. Add a due date, filter what matters, drag things into order, and pick up where you left off after a reload.</p>
+        <div class="cta">
+          <a class="btn" href="app.html">Open Daybook</a>
+          <a class="btn ghost" href="#features">See features</a>
+        </div>
+        <p class="fine">No sign-up. No server. Tasks stay on your device.</p>
+      </div>
+
+      <div class="preview" aria-hidden="true">
+        <div class="pv-top">
+          <div class="row"><span>2 of 5 done</span><span>40%</span></div>
+          <div class="pv-bar"><i></i></div>
+        </div>
+        <div class="pv-row">
+          <span class="pv-check"></span>
+          <div>
+            <div class="pv-title">Send project update to the team</div>
+            <div class="pv-meta"><span class="pill work">Work</span><span>Due Today</span></div>
+          </div>
+        </div>
+        <div class="pv-row">
+          <span class="pv-check"></span>
+          <div>
+            <div class="pv-title">Renew library card</div>
+            <div class="pv-meta"><span class="pill personal">Personal</span><span class="late">Due Yesterday</span></div>
+          </div>
+        </div>
+        <div class="pv-row">
+          <span class="pv-check"></span>
+          <div>
+            <div class="pv-title">Review chapter 4 notes</div>
+            <div class="pv-meta"><span class="pill study">Study</span><span>Due Tomorrow</span></div>
+          </div>
+        </div>
+        <div class="pv-row done">
+          <span class="pv-check"></span>
+          <div>
+            <div class="pv-title">Prepare slides for Monday review</div>
+            <div class="pv-meta"><span class="pill work">Work</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="features" class="band">
+      <div class="wrap">
+        <h2>What Daybook does</h2>
+        <p class="sub">Everything a daily to-do list needs, and nothing that gets in the way.</p>
+        <div class="features">
+          <div class="feature">
+            <h3>Add and edit in one place</h3>
+            <p>Type a name, pick a category and a due date, press Add. Double-click any task to edit it where it sits.</p>
+          </div>
+          <div class="feature">
+            <h3>Categories</h3>
+            <p>Sort tasks into Work, Personal, Study or Other. Each category chip shows how many tasks it holds.</p>
+          </div>
+          <div class="feature">
+            <h3>Filters and search</h3>
+            <p>Switch between All, Active and Completed, narrow by category, and search by words in the task name.</p>
+          </div>
+          <div class="feature">
+            <h3>Drag to reorder</h3>
+            <p>Grab the handle with a mouse or finger. Keyboard users can move a task with the arrow keys.</p>
+          </div>
+          <div class="feature">
+            <h3>Overdue flag</h3>
+            <p>A task past its due date is marked in red until you complete it.</p>
+          </div>
+          <div class="feature">
+            <h3>Saved automatically</h3>
+            <p>Every change is written to the browser, so your list is still there after a reload. Deleted something by mistake? Undo it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <p class="sub">Three moves cover the whole day.</p>
+        <ol class="steps">
+          <li>
+            <h3>Add a task</h3>
+            <p>Write what needs doing, choose a category, and set a due date if there is one.</p>
+          </li>
+          <li>
+            <h3>Organise the list</h3>
+            <p>Drag tasks into the order you plan to do them. Filter or search when the list grows.</p>
+          </li>
+          <li>
+            <h3>Tick it off</h3>
+            <p>Tap the checkbox. The task is struck through and the progress bar at the top moves up.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="built" class="band">
+      <div class="wrap">
+        <h2>Built with</h2>
+        <p class="sub">A front-end project with plain web technology.</p>
+        <ul class="stack">
+          <li>JavaScript (ES6+)</li>
+          <li>DOM manipulation</li>
+          <li>localStorage API</li>
+          <li>CSS transitions</li>
+          <li>Responsive CSS</li>
+        </ul>
+        <p class="stack-note">No frameworks and no server dependencies. The whole site is static files.</p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <h2>Ready to plan your day?</h2>
+        <p class="sub">Open the app and add your first task.</p>
+        <div class="cta"><a class="btn" href="app.html">Open Daybook</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Daybook &middot; Built by Nisha Oad &middot; Internship project: Dynamic Task Manager &amp; Productivity Tracker</span>
+      <span><a href="app.html">Open app</a> &middot; <a href="https://github.com/oadnisha805-spec" target="_blank" rel="noopener">GitHub</a> &middot; <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage docs</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
